@@ -1,3 +1,4 @@
+@ui
 Feature: Login into Naic website
 
   As a user
