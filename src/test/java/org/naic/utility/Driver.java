@@ -11,12 +11,9 @@ public class Driver {
 
     private Driver(){ }
 
-    /**
-     * Return obj with only one WebDriver instance
-     * @return same WebDriver if exists , new one if null
-     */
+
     public static WebDriver getDriver(){
-        // read the browser type you want to launch from properties file
+
         String browserName = ConfigReader.read("browser") ;
 
         if(obj == null){
@@ -26,7 +23,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     obj = new ChromeDriver();
                     break;
-                case "firefox" :
+                case "edge" :
                     WebDriverManager.edgedriver().setup();
                     obj = new EdgeDriver();
                     break;
@@ -40,7 +37,7 @@ public class Driver {
 
 
         }else{
-//
+
             return obj ;
 
         }
